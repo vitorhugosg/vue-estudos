@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue JS - Introdução ao VueJs 2</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<p>{{ msg }}</p><br>
+		<p v-bind:title="titulo ">Teste com title</p>7
+		<p v-if="condicao">Teste com if</p>
+		<ul>
+			<!-- ao contrario do foreach do php -->
+			<li v-for="registro in registros">
+				{{registro.titulo}}
+			</li>
+		</ul>
+		<button>salvar</button>
+		<button>aguarde...</button>
+	</div>
+
+
+
+	<script type="text/javascript">
+	var app = new Vue({
+		el: "#app",
+		data: {
+			msg: 'Olá Mundo!',
+			titulo: "Um texto novo title",
+			condicao: true,
+			registros: [
+				{titulo: 'registro1'},
+				{titulo: 'registro2'},
+				{titulo: 'registro3'},
+				{titulo: 'registro4'},
+				{titulo: 'registro5'},
+				{titulo: 'registro6'},
+				{titulo: 'registro7'},
+			]
+		}
+
+	});
+	</script>
+</body>
+</html>
